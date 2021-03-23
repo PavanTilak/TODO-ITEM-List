@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--list row page dimentions-->
+    <dimen name="nameTextSize">17sp</dimen>
+    <dimen name="categoryTextSize">15sp</dimen>
+    <dimen name="goodForTextSize">12sp</dimen>
+    <dimen name="openCloseTextSize">14sp</dimen>
+
+
+
+    <!--Details page dimentions-->
+    <dimen name="restDetailNameTxt">22sp</dimen>
+    <dimen name="restDetailCategoryTxt">17sp</dimen>
+    <dimen name="margin">12dp</dimen>
+    <dimen name="search_icon_HW">40dp</dimen>
+    <dimen name="search_height">50dp</dimen>
+
+</resources>

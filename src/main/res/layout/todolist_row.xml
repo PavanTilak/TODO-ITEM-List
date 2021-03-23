@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mViewRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Id"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/nameTextSize"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:textStyle="bold"/>
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="@dimen/margin"/>
+
+    <TextView
+        android:id="@+id/userId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/categoryTextSize"
+        android:textColor="@color/gray"
+        android:text="userID"
+        app:layout_constraintLeft_toLeftOf="@+id/id"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/categoryTextSize"
+        android:textColor="@color/gray"
+        android:text="title"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginRight="@dimen/margin"
+        app:layout_constraintLeft_toLeftOf="@+id/userId"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userId"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/completed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/categoryTextSize"
+        android:textColor="@color/gray"
+        android:text="completed"
+        app:layout_constraintLeft_toLeftOf="@+id/title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:textStyle="bold"/>
+
+    <View
+        android:id="@+id/lineView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/blue"
+        android:layout_marginTop="6dp"
+        app:layout_constraintLeft_toLeftOf="@+id/completed"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/completed"  />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

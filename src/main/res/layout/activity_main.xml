@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/restTabView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_height"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/margin"
+        android:background="@drawable/ic_round_bg">
+
+        <Button
+            android:id="@+id/searchBtn"
+            android:layout_width="@dimen/search_icon_HW"
+            android:layout_height="@dimen/search_icon_HW"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_add"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:layout_toLeftOf="@+id/searchBtn"
+            android:layout_marginRight="@dimen/margin"/>
+
+        <EditText
+            android:id="@+id/searchText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_icon_HW"
+            android:paddingLeft="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin"
+            android:hint="Enter text to add in TODO list"
+            android:textColor="@color/gray"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/line1"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"/>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:indeterminate="true"
+        android:progress="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/emptyStringView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_str"
+        android:orientation="horizontal"
+        android:textColor="@color/gray"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

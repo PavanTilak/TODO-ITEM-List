@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ToDoList</string>
+    <string name="search">Add</string>
+    <string name="empty_msg">Please input String to Add in TODO List !!</string>
+    <string name="add_str">Please Input text and click Add Button !!</string>
+    <string name="network_error">No Network, Please connect to the Internet !!</string>
+</resources>
